@@ -77,8 +77,7 @@ public class UserRegistration
     public static void checkValidPassword(String password) {
 
         boolean isPassword;
-        String passwordRegex = "^(?=.*[A-Z])([a-zA-Z0-9]*([@#$%^&-+=()])*).{8,}$";  //at least 1 Upper Case
-
+        String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])([a-zA-Z0-9]*([@#$%^&-+=()])*).{8,}$";     // At least 1 numeric number
         Pattern patternObject = Pattern.compile(passwordRegex);
         if (password == null) {
             isPassword = false;
